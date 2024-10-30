@@ -16,18 +16,7 @@
     padding-bottom: 1.3rem;
     font-size: 3rem;
 }
-.btn {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    line-height: 3rem !important;
-    width: 90%;
-    height: 4rem;
-    font-size: 2.5rem !important;
-    color:  #ca7302 ;
-    background-color: #ca7302 !important;
-    cursor: pointer !important;
-    text-align: center;
-}
+
 .box4{
     margin-top: 10px;
     text-align: center;
