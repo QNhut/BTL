@@ -10,12 +10,6 @@ $(document).ready(function () {
     $userMenu.removeClass("active");
   });
 
-  // $("#cart-btn").click(function () {
-  //   $cartItem.toggleClass("active");
-  //   $navbar.removeClass("active");
-  //   $userMenu.removeClass("active");
-  // });
-
   $("#user-btn").click(function () {
     $userMenu.toggleClass("active");
     $navbar.removeClass("active");

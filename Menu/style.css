@@ -21,10 +21,11 @@
     margin-top: 10px;
     text-align: center;
     border: 1px solid #fff;
+    /* min-width: 250px; */
+    min-height: 290px;
 }
 .box4:hover{
-    background-color: #fff;
-    color: #000;
+    transform: scale(1.15)
 }
 .box4 img{
     width: 100%;
@@ -38,13 +39,11 @@
     color: #fff;
 }
 .box4 .price{
-    font-size: 1.5rem;
+    font-size: 16px;
     color: #fff;
 }
 
-.box4:hover >*{
-    color: #000;
-}
+
 .box4 .price span{
     font-size: 1.2rem;
     text-decoration: line-through;

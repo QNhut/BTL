@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Cakes</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/global.css" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/home.module.js" defer></script>
+    <script src="/index.js" defer></script>
+    <script src="./menu.module.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg shadow-sm">
+          <div class="container-fluid">
+            <a class="navbar-brand ms-2" href="#">
+              <img src="../Image/Logo.png" alt="logo" class="img-fluid" />
+            </a>
+            <div class="collapse navbar-collapse thumuc" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/menu/index.html">Menu</a>
+                  <div class="menu-sub">
+                    <div class="menu-n mx-3">
+                      <h2>Thức uống</h2>
+                      <ul class="menu-l">
+                        <li><a href="/menu/index.html#cafe">Cà phê</a></li>
+                        <li><a href="/menu/index.html#tea">Trà</a></li>
+                        <li><a href="/menu/index.html#soda">Soda</a></li>
+                        <li><a href="/menu/index.html#nuocep">Nước ép</a></li>
+                        <li><a href="/menu/index.html#yaourt">Yaourt</a></li>
+                        <li><a href="/menu/index.html#smoothie">Sinh tố</a></li>
+                        <li><a href="/menu/index.html#iceblend">Đá xay</a></li>
+                      </ul>
+                    </div>
+  
+                    <div class="menu-n mx-3">
+                      <h2>Bánh ngọt</h2>
+                      <ul class="menu-l">
+                        <li>
+                          <a href="../Menu/index1.html#banhlanh">Bánh lạnh</a>
+                        </li>
+                        <li>
+                          <a href="../Menu/index1.html#banhquy"
+                            >Bánh cookies - croissant</a
+                          >
+                        </li>
+                        <li><a href="../Menu/index1.html#banhmi">Bánh mì</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link" href="/introduce/index1.html">Giới thiệu</a>
+                  <div class="menu-sub">
+                    <div class="menu-n mx-3">
+                      <h2>Hành Trình Cà Phê</h2>
+                      <ul class="menu-l">
+                        <li>
+                          <a href="/introduce/index1.html#nguon">Nguồn gốc</a>
+                        </li>
+                        <li>
+                          <a href="/introduce/index1.html#thuonghang"
+                            >Tính thượng hạng</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/introduce/index1.html#nguyenban"
+                            >Tôn trọng nguyên bản</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+  
+                    <div class="menu-n mx-3">
+                      <h2>Hạt Cà Phê Rang Xay</h2>
+                      <ul class="menu-l">
+                        <li>
+                          <a href="/introduce/index.html#4">Yếu tố quyết định</a>
+                        </li>
+                        <li>
+                          <a href="/introduce/index.html#5">Cà phê hoàn hảo</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link" href="/auth/index.html">Hội viên</a>
+                </li>
+              </ul>
+            </div>
+            <div class="icons">
+              <div class="navbar-toggler" type="button" id="search-btn">
+                <i class="fas fa-search"></i>
+              </div>
+              <div class="fas fa-shopping-cart" id="cart-btn"></div>
+              <div id="current-user"></div>
+              <div class="navbar-toggler" type="button" id="menu-btn">
+                <i class="fas fa-bars"></i>
+                <!-- Đúng ID cho JavaScript -->
+              </div>
+            </div>
+            <div class="search-form position-absolute p-1 ms-5 shadow-sm">
+              <label for="search-box" class="fas fa-search"></label>
+              <input
+                type="search"
+                id="search-box"
+                placeholder="Bạn muốn mua gì ..."
+              />
+            </div>
+            <div class="cart-items-container">
+              <div class="cart-item d-none">
+                <span class="fas fa-times remove-item"></span>
+                <img src="" alt="img" width="100px" class="item-image" />
+                <div class="content">
+                  <h3 class="item-title"></h3>
+                  <div class="price">$<span class="item-price"></span></div>
+                  <div class="quantity-control">
+                    <button class="btn btn-secondary decrease-quantity">-</button>
+                    <span class="item-quantity">1</span>
+                    <button class="btn btn-secondary increase-quantity">+</button>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="btn btn-primary">Check Out</a>
+            </div>
+            <div class="user-menu">
+              <div class="fas fa-times" id="close-btn"></div>
+            </div>
+          </div>
+        </nav>
+      </header>
+<main class="main" id="main">
+    <section class="thumuc thumuc-fixed" id="thumuc">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../Home/index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="../Menu/index.html">Sản phẩm</a></li>
+            </ol>
+        </nav>
+        <div class="category-menu">
+    
+            <!-- Tiêu đề "Tất cả" với liên kết mở/tắt -->
+            <h1 class="text-center category-title" onclick="toggleAll()">Tất cả</h1>
+    
+            <!-- Thức Uống -->
+            <h2 class="category-title" onclick="toggleSection('collapseDrinks')">
+                Thức uống
+            </h2>
+            <div class="collapse" id="collapseDrinks">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="../Menu/index.html#cafe">Cà phê</a></li>
+                    <li class="list-group-item"><a href="../Menu/index.html#tea">Trà</a></li>
+                    <li class="list-group-item"><a href="../Menu/index.html#soda">Soda</a></li>
+                    <li class="list-group-item"><a href="../Menu/index.html#nuocep">Nước ép</a></li>
+                    <li class="list-group-item"><a href="../Menu/index.html#yaourt">Yaourt</a></li>
+                    <li class="list-group-item"><a href="../Menu/index.html#sinhto">Sinh tố</a></li>
+                    <li class="list-group-item"><a href="../Menu/index.html#daxay">Đá xay</a></li>
+                </ul>
+            </div>
+    
+            <!-- Bánh -->
+            <h2 class="category-title" onclick="toggleSection('collapseCake')">
+                Bánh
+            </h2>
+            <div class="collapse" id="collapseCake">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="../Menu/index1.html#banhlanh">Bánh lạnh</a></li>
+                    <li class="list-group-item"><a href="../Menu/index1.html#banhquy">Bánh cookies - croissant</a></li>
+                    <li class="list-group-item"><a href="../Menu/index1.html#banhmi">Bánh mì</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <aside class="sanpham" id="sanpham-banh">
+        <section class="menu" id="banhlanh">
+            <h1 class="heading "><span>Bánh </span>lạnh</h1>
+            <div class="box-container">
+                <div class="row ">
+                    <div class=" col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhlanh/1.png" alt="">
+                            <h3>Bánh Flan</h3>
+                            <div class="price">15.000đ <span>20.000đ</span></div>
+                            <a href="#" class="btn ">Buy</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhlanh/2.png" alt="">
+                            <h3>Panna cotta dâu</h3>
+                            <div class="price">20.000đ</div>
+                            <a href="#" class="btn">Buy</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhlanh/3.png" alt="">
+                            <h3>Panna cotta</h3>
+                            <div class="price">20.000đ</div>
+                            <a href="#" class="btn">Buy</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhlanh/4.png" alt="">
+                            <h3>Tiramisu matcha</h3>
+                            <div class="price">25.000đ</div>
+                            <a href="#" class="btn">Buy</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhlanh/5.png" alt="">
+                            <h3>Tiramisu socola</h3>
+                            <div class="price">25.000đ</div>
+                            <a href="#" class="btn">Buy</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhlanh/6.png" alt="">
+                            <h3>Bánh Mousse</h3>
+                            <div class="price">30.000đ</div>
+                            <a href="#" class="btn">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section class="menu" id="banhquy">
+            <h1 class="heading "><span>Bánh </span>cookies - croissant</h1>
+            <div class="box-container">
+                <div class="row ">
+                    <div class=" col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhquy/1.png" alt="">
+                            <h3>Cookies</h3>
+                            <div class="price">20.000đ</div>
+                            <a href="#" class="btn ">Buy</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhquy/2.png" alt="">
+                            <h3>Cookies socola</h3>
+                            <div class="price">25.000đ</div>
+                            <a href="#" class="btn">Buy</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhquy/3.png" alt="">
+                            <h3>Croissant</h3>
+                            <div class="price">20.000đ</div>
+                            <a href="#" class="btn">Buy</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhquy/4.png" alt="">
+                            <h3>Croissant</h3>
+                            <div class="price">20.000đ <span>25.000đ</span></div>
+                            <a href="#" class="btn">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <section class="menu" id="banhmi">
+            <h1 class="heading "><span>Bánh </span>mì</h1>
+            <div class="box-container">
+                <div class="row">
+                    <div class=" col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhmi/1.png" alt="">
+                            <h3>Bánh mì</h3>
+                            <div class="price">15.000đ</div>
+                            <a href="#" class="btn ">Buy</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
+                        <div class="box4">
+                            <img src="../Image/Cake/Banhmi/2.png" alt="">
+                            <h3>Bánh mì tam giác</h3>
+                            <div class="price">20.000đ</span></div>
+                            <a href="#" class="btn">Buy</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    </aside>
+    
+</main>
+<section class="footer">
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+    <div class="links">
+        <a href="../Home/index.html">Trang chủ</a>
+        <a href="../Menu/index.html">Menu</a>
+        <a href="../Intrudoce/index1.html">Giới thiệu</a>
+        <a href="#review">Sự kiện</a>
+        <a href="#contact">Hội viên</a>
+    </div>
+    <div class="credit">created by <span>Nguyen Quoc Nhut</span> | all rights reserved!</div>
+</section>
+
+</body>
+</html>

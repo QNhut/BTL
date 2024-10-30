@@ -132,7 +132,7 @@ $(document).ready(function () {
         <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6">
           <div class="box4">
             <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
+            <h6 class="text-white mt-3">${product.name}</h6>
             <div class="price">${product.price}${
           product.oldPrice ? `<span>${product.oldPrice}</span>` : ""
         }</div>
