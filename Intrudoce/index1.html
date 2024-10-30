@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../Home/style.css">
+    <link rel="stylesheet" href="../Menu/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../Js/jquery-3.7.1.min.js"></script>
+    <script src="../Js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../Home/home_modue.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg shadow-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-2" href="#">
+                    <img src="../Image/Logo.png" alt="logo" class="img-fluid">
+                </a>
+                <div class="collapse navbar-collapse thumuc" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Menu/index.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Intrudoce/index1.html">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">Khuyến mãi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#review">Hội viên</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="icons">
+                    <div class="navbar-toggler" type="button" id="search-btn">
+                        <i class="fas fa-search"></i> 
+                    </div>
+                    <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                    <div class="fa-regular fa-circle-user" id="user-btn"></div>
+                    <div class="navbar-toggler" type="button" id="menu-btn">
+                        <i class="fas fa-bars"></i> <!-- Đúng ID cho JavaScript -->
+                    </div>
+                </div>
+                <div class="search-form position-absolute  p-1 ms-5  shadow-sm">
+                    <label for="search-box" class="fas fa-search"></label>
+                    <input type="search" id="search-box" placeholder="Bạn muốn mua gì ...">
+                    
+                </div>
+                <div class="cart-items-container">
+                        <div class="cart-item">
+                            <span class="fas fa-times"></span>
+                            <img src="../Image/item1.jpg" alt="img" width="100px">
+                            <div class="content">
+                                <h3>title</h3>
+                                <div class="price">$100</div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <span class="fas fa-times"></span>
+                            <img src="../Image/item2.jpg" alt="img" width="100px">
+                            <div class="content">
+                                <h3>title</h3>
+                                <div class="price">$100</div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <span class="fas fa-times"></span>
+                            <img src="../Image/item3.jpg" alt="img" width="100px">
+                            <div class="content">
+                                <h3>title</h3>
+                                <div class="price">$100</div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <span class="fas fa-times"></span>
+                            <img src="../Image/item4.jpg" alt="img" width="100px">
+                            <div class="content">
+                                <h3>title</h3>
+                                <div class="price">$100</div>
+                            </div>
+                        </div>
+                    <a href="#" class="btn">Check Out</a>
+                </div>
+                <div class="user-menu">
+                    <div class="fas fa-times" id="close-btn"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+<main class="main" id="main">
+    <section class="thumuc thumuc-fixed" id="thumuc">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../Home/index.html">Trang chủ</a></li>
+                <li class="breadcrumb-item"><a href="../Intrudoce/index1.html">Giới thiệu</a></li>
+            </ol>
+        </nav>
+        <div class="category-menu">
+    
+            <!-- Tiêu đề "Tất cả" với liên kết mở/tắt -->
+            <h1 class="text-center category-title" onclick="toggleAll()">Tất cả</h1>
+    
+            <!-- Thức Uống -->
+            <h2 class="category-title" onclick="toggleSection('collapseDrinks')">
+                Hành Trình Cà Phê
+            </h2>
+            <div class="collapse" id="collapseDrinks">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="../Intrudoce/index1.html#nguon">Nguồn gốc</a></li>
+                    <li class="list-group-item"><a href="../Intrudoce/index1.html#thuonghang">Tính thượng hạng</a></li>
+                    <li class="list-group-item"><a href="../Intrudoce/index1.html#nguyenban">Tôn trọng nguyên bản</a></li>
+                </ul>
+            </div>
+    
+            <!-- Bánh -->
+            <h2 class="category-title" onclick="toggleSection('collapseCake')">
+                Hạt Cà Phê Rang Xay
+            </h2>
+            <div class="collapse" id="collapseCake">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="../Intrudoce/index.html#4">Yếu tố quyết định</a></li>
+                    <li class="list-group-item"><a href="../Intrudoce/index.html#5">Cà phê hoàn hảo</a></li>
+                </ul>
+            </div>
+    
+        </div>
+    </section>
+    <aside class="noidung" id="noidung">
+        <div class=" ct my-5 mx-5">
+            <h1 class="text-center text-success ">HÀNH TRÌNH CỦA TÁCH CÀ PHÊ ĐẬM VỊ!</h1>
+            <p class="mt-4 ">
+                Tách cà phê đậm vị mà bạn đang thưởng thức chính là kết quả của những nỗ lực không ngừng nghỉ trong suốt hơn nửa thế kỉ qua. Ít ai biết rằng, quy trình chế biến cà phê luôn đòi hỏi sự tỉ mỉ rất cao. Bất kỳ mắt xích nào trong quy trình không được chú trọng cũng có thể làm ảnh hưởng đến chất lượng, từ khâu vun trồng, các biện pháp diệt trừ sâu bệnh, cho đến thu hoạch, chế biến, vận chuyển, rang xay, đóng gói, và cuối cùng là tách cà phê đậm đà.
+            </p>
+            
+            <h2 class="text-success mt-4" id="nguon">Tinh khiết từ nguồn gốc</h2>
+            <p>
+                Để nuôi dưỡng sự thuần vị trong từng tách cà phê, chúng tôi luôn tìm kiếm và chọn lọc từ những giống Arabica, Robusta tốt nhất. Tiên phong trong việc mang cà phê tươi được đóng gói ngay tại nơi thu hoạch đến tay người thưởng thức, chúng tôi hiểu rằng chất lượng cà phê phụ thuộc vào ba yếu tố cốt lõi: giống cây trồng, điều kiện đất và độ cao của vùng trồng. Nguồn gốc tinh khiết chính là yếu tố quan trọng nhất để giữ trọn hương vị đậm đà.
+            </p>
+        
+            <div class="text-center mt-4">
+                <img src="../Image/item1.jpg" alt="Cà phê tươi" class="img-fluid">
+            </div>
+            <h2 class="text-success mt-4" id="thuonghang">Giữ gìn đặc tính thượng hạng của hạt cà phê</h2>
+            <p class="mt-4 ">
+                Tôn trọng giá trị truyền thống, hầu hết các công đoạn sản xuất đều được thực hiện thủ công với sự khắt khe từ bước khởi đầu. Chúng tôi cam kết giữ gìn đặc tính thượng hạng của từng hạt cà phê, đảm bảo từng bước trong quy trình sản xuất được tuân thủ nghiêm ngặt.
+            </p>
+            <div class="text-center mt-4">
+                <img src="../Image/item1.jpg" alt="Cà phê tươi" class="img-fluid">
+            </div>
+            <h2 class="text-success mt-4" id="nguyenban">Tôn trọng nguyên bản cho tách cà phê đậm vị</h2>
+            <p class="mt-4 ">
+                Chúng tôi luôn đồng hành cùng bạn trên hành trình tìm kiếm những hạt cà phê ngon nhất và rang xay chúng đến mức hoàn hảo. Công việc đó được thực hiện mỗi ngày với sự tận tâm, tôn trọng nguyên bản để mỗi tách cà phê mang đậm hương vị thuần chất Việt.
+            </p>
+            <div class="text-center mt-4">
+                <img src="../Image/item1.jpg" alt="Cà phê tươi" class="img-fluid">
+            </div>
+        </div> 
+    </aside>
+    
+</main>
+<section class="footer">
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+    <div class="links">
+        <a href="../Home/index.html">Trang chủ</a>
+        <a href="../Menu/index.html">Menu</a>
+        <a href="../Intrudoce/index1.html">Giới thiệu</a>
+        <a href="#review">Sự kiện</a>
+        <a href="#contact">Hội viên</a>
+    </div>
+    <div class="credit">created by <span>Nguyen Quoc Nhut</span> | all rights reserved!</div>
+</section>
+
+</body>
+</html>
