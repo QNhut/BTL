@@ -16,7 +16,7 @@ li {
 }
 
 .category-title {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   width: 100%;
   text-align: left;
@@ -25,7 +25,7 @@ li {
 .category-item {
   text-decoration: none;
   color: black;
-  font-size: 18px;
+  font-size: 25px;
   margin: 10px 0;
 }
 
