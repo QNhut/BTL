@@ -604,7 +604,7 @@ $(document).ready(function () {
             }" alt="img" width="100px" />
             <div class="content">
                 <h3 class="item-title">${item.name}</h3>
-                <div class="price item-price">${item.price.toLocaleString()}đ</div>
+                <div class="price item-price">${item.price.toLocaleString()}</div>
                 <button class="btn btn-secondary decrease-quantity">-</button>
                 <span class="item-quantity">1</span>
                 <button class="btn btn-secondary increase-quantity">+</button>

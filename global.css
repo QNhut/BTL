@@ -677,3 +677,27 @@ header .search-form input {
   }
 
 }
+
+.cart-item {
+  width: 100%;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.item-information {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+
+.quantity-control {
+  width: fit-content;
+  display: flex;
+}
+
+.quantity-control button, .quantity-control span {
+  width: 40px;
+  height: 40px;
+}
