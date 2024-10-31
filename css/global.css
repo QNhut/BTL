@@ -266,10 +266,12 @@ header .search-form input {
   margin-top: 10px;
   padding: 2rem;
   text-align: center;
-  border: 1px solid #fff;
+  border: 1px solid black;
+  min-height: 290px;
 }
-.box1:hover {
-  background-color: #fff;
+
+.box1:hover{
+  transform: scale(1.045)
 }
 
 .box1 img {
@@ -279,10 +281,11 @@ header .search-form input {
   background-size: cover;
   border-radius: 50%;
 }
-.box1 h3 {
-  font-size: 2rem;
-  color: #fff;
-  padding: 0.5rem 0;
+
+.box1 h3{
+  padding-top: 10px;
+  font-size: 1.8rem;
+  color: black;
 }
 
 .box1 .price {
