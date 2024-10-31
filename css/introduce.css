@@ -1,0 +1,32 @@
+.noidung{
+  width: 80%;
+  margin-left: 20%;
+
+}
+.ct{
+  padding: 1rem;
+  
+}
+.ct h1{
+  text-align: center;
+  color: rgb(141, 20, 20);
+  text-transform: uppercase;
+  padding-bottom: 1.3rem;
+  font-size: 4rem;
+}
+.ct p{
+  font-size: 1.7rem;
+  text-transform: none;
+}
+.ct h2{
+  text-transform: none;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+.ct img{
+  width: 90%;
+  height: 30rem;
+  object-fit: cover;
+  background-size: cover;
+}
+

@@ -1,0 +1,76 @@
+li {
+  list-style: none;
+}
+
+#navbar-category {
+  width: 25%;
+  position: fixed;
+  left: 0;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: white;
+}
+
+.nav-category-item {
+  margin-bottom: 30px;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+
+.category-item {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.section-content {
+  margin-left: 25%; /* Dịch phải để nhường chỗ cho sidebar */
+  padding: 20px;
+}
+
+.heading{
+  text-align: left;
+  color: rgb(141, 20, 20);
+  text-transform: uppercase;
+  padding-bottom: 1.3rem;
+  font-size: 3rem;
+}
+
+.box4{
+  margin-top: 10px;
+  text-align: center;
+  border: 1px solid black;
+  /* min-width: 250px; */
+  min-height: 290px;
+}
+
+.box4:hover{
+  transform: scale(1.045)
+}
+.box4 img{
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  background-size: cover;
+}
+.box4 h3{
+  padding-top: 10px;
+  font-size: 1.8rem;
+  color: black;
+}
+.box4 .price{
+  font-size: 16px;
+  color: black;
+}
+
+.box4 .price span{
+  font-size: 1.2rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+}

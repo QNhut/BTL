@@ -92,11 +92,23 @@ $(document).ready(function () {
   }
 
   // Xử lý khi nhấn nút "Thanh toán ngay"
-  $(".btn-primary").on("click", function (e) {
+  $("#btn-payment").on("click", function (e) {
     e.preventDefault();
     const name = $("#name-customer").val() ?? "<no name>";
     const email = $("#email-customer").val() ?? "<no email>";
     const total = $("#total-price").text();
+
+    if (!total) {
+      return;
+    }
+
+    const totalAsNumber = Number(
+      total.replace(/,/g, "").replace("đ", "").trim()
+    );
+
+    if (!totalAsNumber) {
+      return;
+    }
 
     const newInvoice = {
       id: generateInvoiceId(),
@@ -108,8 +120,8 @@ $(document).ready(function () {
     // Lưu invoice mới vào localStorage và cập nhật bảng
     saveInvoice(newInvoice);
     renderInvoices();
-    localStorage.removeItem("cart")
-    window.location.reload()
+    localStorage.removeItem("cart");
+    window.location.reload();
   });
 
   // Hiển thị bảng invoices khi trang được tải

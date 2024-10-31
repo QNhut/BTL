@@ -5,24 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/introduce.css">
+    <link rel="stylesheet" href="/css/menu.css">
 
-    <script src="/Js/jquery-3.7.1.min.js"></script>
-    <script src="/Js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="/home.module.js" defer></script>
-    <script src="index.js" defer></script>
+    
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/common.js" defer></script>
+    <script src="/js/auth.js" defer></script>
+    <script src="/js/checkout.js" defer></script>
+    <script src="/js/introduce.js" defer></script>
+    <script src="/js/menu.js" defer></script>
+    <script src="/js/home.js" defer></script>
 </head>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg shadow-sm">
       <div class="container-fluid">
         <a class="navbar-brand ms-2" href="#">
-          <img src="../Image/Logo.png" alt="logo" class="img-fluid" />
+          <img src="/image/Logo.png" alt="logo" class="img-fluid" />
         </a>
         <div class="collapse navbar-collapse thumuc" id="navbarNav">
           <ul class="navbar-nav mx-auto">
@@ -30,53 +37,53 @@
               <a class="nav-link" href="/">Trang chủ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/menu/index.html">Menu</a>
+              <a class="nav-link" href="/menu.html">Menu</a>
               <div class="menu-sub">
                 <div class="menu-n mx-3">
                   <h2>Thức uống</h2>
                   <ul class="menu-l">
-                    <li><a href="/menu/index.html#cafe">Cà phê</a></li>
-                    <li><a href="/menu/index.html#tea">Trà</a></li>
-                    <li><a href="/menu/index.html#soda">Soda</a></li>
-                    <li><a href="/menu/index.html#juice">Nước ép</a></li>
-                    <li><a href="/menu/index.html#yaourt">Yaourt</a></li>
-                    <li><a href="/menu/index.html#smoothie">Sinh tố</a></li>
-                    <li><a href="/menu/index.html#iceblend">Đá xay</a></li>
+                    <li><a href="/menu.html#cafe">Cà phê</a></li>
+                    <li><a href="/menu.html#tea">Trà</a></li>
+                    <li><a href="/menu.html#soda">Soda</a></li>
+                    <li><a href="/menu.html#juice">Nước ép</a></li>
+                    <li><a href="/menu.html#yaourt">Yaourt</a></li>
+                    <li><a href="/menu.html#smoothie">Sinh tố</a></li>
+                    <li><a href="/menu.html#iceblend">Đá xay</a></li>
                   </ul>
                 </div>
                 <div class="menu-n mx-3">
                   <h2>Bánh ngọt</h2>
                   <ul class="menu-l">
                     <li>
-                      <a href="../Menu/index1.html#coldcake">Bánh lạnh</a>
+                      <a href="/menu.html#coldcake">Bánh lạnh</a>
                     </li>
                     <li>
-                      <a href="../Menu/index1.html#cookies-croissant"
+                      <a href="/menu.html#cookies-croissant"
                         >Bánh cookies - croissant</a
                       >
                     </li>
-                    <li><a href="../Menu/index1.html#banh-mi">Bánh mì</a></li>
+                    <li><a href="/menu.html#bread">Bánh mì</a></li>
                   </ul>
                 </div>
               </div>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/introduce/index1.html">Giới thiệu</a>
+              <a class="nav-link" href="/journey.html">About</a>
               <div class="menu-sub">
                 <div class="menu-n mx-3">
                   <h2>Hành Trình Cà Phê</h2>
                   <ul class="menu-l">
                     <li>
-                      <a href="/introduce/index1.html#nguon">Nguồn gốc</a>
+                      <a href="/journey.html#nguon">Nguồn gốc</a>
                     </li>
                     <li>
-                      <a href="/introduce/index1.html#thuonghang"
+                      <a href="/journey.html#thuonghang"
                         >Tính thượng hạng</a
                       >
                     </li>
                     <li>
-                      <a href="/introduce/index1.html#nguyenban"
+                      <a href="/journey.html#nguyenban"
                         >Tôn trọng nguyên bản</a
                       >
                     </li>
@@ -87,10 +94,10 @@
                   <h2>Hạt Cà Phê Rang Xay</h2>
                   <ul class="menu-l">
                     <li>
-                      <a href="/introduce/index.html#4">Yếu tố quyết định</a>
+                      <a href="/introduce.html#4">Yếu tố quyết định</a>
                     </li>
                     <li>
-                      <a href="/introduce/index.html#5">Cà phê hoàn hảo</a>
+                      <a href="/introduce.html#cup">Cà phê hoàn hảo</a>
                     </li>
                   </ul>
                 </div>
@@ -98,7 +105,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/auth/index.html">Hội viên</a>
+              <a class="nav-link" href="/auth.html">Thành viên</a>
             </li>
           </ul>
         </div>
@@ -114,14 +121,6 @@
             <i class="fas fa-bars"></i>
             <!-- Đúng ID cho JavaScript -->
           </div>
-        </div>
-        <div class="search-form position-absolute p-1 ms-5 shadow-sm">
-          <label for="search-box" class="fas fa-search"></label>
-          <input
-            type="search"
-            id="search-box"
-            placeholder="Bạn muốn mua gì ..."
-          />
         </div>
         <div class="cart-items-container">
           <!-- <div class="cart-item">
@@ -148,7 +147,7 @@
             </div>
             <span class="fas fa-times remove-item"></span>
           </div> -->
-          <a href="/checkout" class="btn btn-primary text-left">Thanh toán</a>
+          <a href="/checkout.html" class="btn btn-primary text-left">Thanh toán</a>
         </div>
         <div class="user-menu">
           <div class="fas fa-times" id="close-btn"></div>
@@ -174,7 +173,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Tea/5.png" alt="">
+                        <img src="/image/Drinks/Tea/5.png" alt="">
                         <h3>Trà đào cam xả</h3>
                         <div class="price">45.000đ</div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -182,7 +181,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Cafe/4.png" alt="">
+                        <img src="/image/Drinks/Cafe/4.png" alt="">
                         <h3>Bạc xĩu</h3>
                         <div class="price">24.000đ</div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -190,7 +189,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Juice/3.png" alt="">
+                        <img src="/image/Drinks/Juice/3.png" alt="">
                         <h3>Nước ép cam</h3>
                         <div class="price">27.000đ <span>30.000đ</span></div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -198,7 +197,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Cafe/3.png" alt="">
+                        <img src="/image/Drinks/Cafe/3.png" alt="">
                         <h3>Cà phê sữa</h3>
                         <div class="price">24.000đ</div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -206,7 +205,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Tea/8.png" alt="">
+                        <img src="/image/Drinks/Tea/8.png" alt="">
                         <h3>Trà sen vàng</h3>
                         <div class="price">45.000đ</div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -214,7 +213,7 @@
                 </div>
                 <div class=" col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Tea/7.png" alt="">
+                        <img src="/image/Drinks/Tea/7.png" alt="">
                         <h3>Trà dâu</h3>
                         <div class="price">45.000đ</div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -222,7 +221,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Daxay/2.png" alt="">
+                        <img src="/image/Drinks/Daxay/2.png" alt="">
                         <h3>Matcha đá xay</h3>
                         <div class="price">45.000đ</span></div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -230,7 +229,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Cafe/5.png" alt="">
+                        <img src="/image/Drinks/Cafe/5.png" alt="">
                         <h3>Cà phê muối</h3>
                         <div class="price">27.000đ</div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -238,7 +237,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Juice/9.png" alt="">
+                        <img src="/image/Drinks/Juice/9.png" alt="">
                         <h3>Nước ép dưa lưới</h3>
                         <div class="price">30.000đ <span>35.000đ</span></div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -246,7 +245,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Soda/5.png" alt="">
+                        <img src="/image/Drinks/Soda/5.png" alt="">
                         <h3>Soda chanh</h3>
                         <div class="price">35.000đ</div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -254,7 +253,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Daxay/4.png" alt="">
+                        <img src="/image/Drinks/Daxay/4.png" alt="">
                         <h3>Oreo đá xay</h3>
                         <div class="price">45.000đ</div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -262,7 +261,7 @@
                 </div>
                 <div class="col-lg-4 col-xl-4 col-xxl-2 col-md-3 col-sm-4 col-6 ">
                     <div class="box1">
-                        <img src="../Image/Drinks/Daxay/5.png" alt="">
+                        <img src="/image/Drinks/Daxay/5.png" alt="">
                         <h3>Sakura đá xay</h3>
                         <div class="price">45.000đ</div>
                         <button type="button" class="btn btn-primary">Buy</button>
@@ -286,7 +285,7 @@
                             <a href="#" class="fas fa-eye"></a>
                         </div>
                         <div class="image">
-                            <img src="../Image/Cake/Banhlanh/2.png" alt="">
+                            <img src="/image/Cake/Banhlanh/2.png" alt="">
                         </div>
                         <div class="content">
                             <div class="stars">
@@ -308,7 +307,7 @@
                             <a href="#" class="fas fa-eye"></a>
                         </div>
                         <div class="image">
-                            <img src="../Image/Cake/Banhlanh/5.png" alt="">
+                            <img src="/image/Cake/Banhlanh/5.png" alt="">
                         </div>
                         <div class="content">
                             <div class="stars">
@@ -330,7 +329,7 @@
                             <a href="#" class="fas fa-eye"></a>
                         </div>
                         <div class="image">
-                            <img src="../Image/Cake/Banhmi/2.png" alt="">
+                            <img src="/image/Cake/Banhmi/2.png" alt="">
                         </div>
                         <div class="content">
                             <div class="stars">
@@ -352,7 +351,7 @@
                             <a href="#" class="fas fa-eye"></a>
                         </div>
                         <div class="image">
-                            <img src="../Image/Cake/Banhquy/2.png" alt="">
+                            <img src="/image/Cake/Banhquy/2.png" alt="">
                         </div>
                         <div class="content">
                             <div class="stars">
@@ -374,11 +373,11 @@
         <h1 class="heading"><span>customer's</span> review</h1>
         <div class="box-container">
             <div class="box">
-                <img src="../Image/item2.jpg" alt="" class="quote">
+                <img src="/image/item2.jpg" alt="" class="quote">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
                     orem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
                     orem ipsum dolor</p>
-                <img src="../Image/item3.jpg" alt="" class="user">
+                <img src="/image/item3.jpg" alt="" class="user">
                 <h3>NHut</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
@@ -389,11 +388,11 @@
                 </div>
             </div>
             <div class="box">
-                <img src="../Image/item2.jpg" alt="" class="quote">
+                <img src="/image/item2.jpg" alt="" class="quote">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
                     orem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
                     orem ipsum dolor</p>
-                <img src="../Image/item3.jpg" alt="" class="user">
+                <img src="/image/item3.jpg" alt="" class="user">
                 <h3>NHut</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
@@ -404,11 +403,11 @@
                 </div>
             </div>
             <div class="box">
-                <img src="../Image/item2.jpg" alt="" class="quote">
+                <img src="/image/item2.jpg" alt="" class="quote">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
                     orem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
                     orem ipsum dolor</p>
-                <img src="../Image/item3.jpg" alt="" class="user">
+                <img src="/image/item3.jpg" alt="" class="user">
                 <h3>NHut</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
@@ -455,10 +454,10 @@
     </div>
     <div class="links">
         <a href="/">Trang chủ</a>
-        <a href="/menu/index.html">Menu</a>
-        <a href="/introduce/index1.html">Giới thiệu</a>
-        <a href="/auth/index.html">Sự kiện</a>
-        <a href="/auth/index.html">Hội viên</a>
+        <a href="/menu.html">Menu</a>
+        <a href="/journey.html">About</a>
+        <a href="/auth.html">Sự kiện</a>
+        <a href="/auth.html">Thành viên</a>
     </div>
     <div class="credit">created by <span>Nguyen Quoc Nhut</span> | all rights reserved!</div>
 </section>

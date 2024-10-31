@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | Drinks</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/common.js" defer></script>
+    <script src="/js/auth.js" defer></script>
+    <script src="/js/checkout.js" defer></script>
+    <script src="/js/introduce.js" defer></script>
+    <script src="/js/menu.js" defer></script>
+    <script src="/js/home.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-2" href="#">
+            <img src="/image/Logo.png" alt="logo" class="img-fluid" />
+          </a>
+          <div class="collapse navbar-collapse thumuc" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/menu.html">Menu</a>
+                <div class="menu-sub">
+                  <div class="menu-n mx-3">
+                    <h2>Thức uống</h2>
+                    <ul class="menu-l">
+                      <li><a href="/menu.html#cafe">Cà phê</a></li>
+                      <li><a href="/menu.html#tea">Trà</a></li>
+                      <li><a href="/menu.html#soda">Soda</a></li>
+                      <li><a href="/menu.html#juice">Nước ép</a></li>
+                      <li><a href="/menu.html#yaourt">Yaourt</a></li>
+                      <li><a href="/menu.html#smoothie">Sinh tố</a></li>
+                      <li><a href="/menu.html#iceblend">Đá xay</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-n mx-3">
+                    <h2>Bánh ngọt</h2>
+                    <ul class="menu-l">
+                      <li>
+                        <a href="/menu.html#coldcake">Bánh lạnh</a>
+                      </li>
+                      <li>
+                        <a href="/menu.html#cookies-croissant"
+                          >Bánh cookies - croissant</a
+                        >
+                      </li>
+                      <li><a href="../Menu/index1.html#bread">Bánh mì</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/journey.html">About</a>
+                <div class="menu-sub">
+                  <div class="menu-n mx-3">
+                    <h2>Hành Trình Cà Phê</h2>
+                    <ul class="menu-l">
+                      <li>
+                        <a href="/journey.html#nguon">Nguồn gốc</a>
+                      </li>
+                      <li>
+                        <a href="/journey.html#thuonghang">Tính thượng hạng</a>
+                      </li>
+                      <li>
+                        <a href="/journey.html#nguyenban"
+                          >Tôn trọng nguyên bản</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="menu-n mx-3">
+                    <h2>Hạt Cà Phê Rang Xay</h2>
+                    <ul class="menu-l">
+                      <li>
+                        <a href="/introduce.html#4">Yếu tố quyết định</a>
+                      </li>
+                      <li>
+                        <a href="/introduce.html#cup">Cà phê hoàn hảo</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/auth.html">Thành viên</a>
+              </li>
+            </ul>
+          </div>
+          <div class="icons">
+            <div class="navbar-toggler" type="button" id="search-btn">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="fas fa-shopping-cart" id="cart-btn">
+              <span class="cart-count">0</span>
+            </div>
+            <div id="current-user"></div>
+            <div class="navbar-toggler" type="button" id="menu-btn">
+              <i class="fas fa-bars"></i>
+              <!-- Đúng ID cho JavaScript -->
+            </div>
+          </div>
+          <div class="cart-items-container">
+            <!-- <div class="cart-item">
+              <img
+                src="/Image/Cake/Banhlanh/1.png"
+                alt="img"
+                width="100px"
+                class="item-image"
+              />
+              <div class="content card-content">
+                <h3 class="item-title">Cake</h3>
+                <div class="item-information">
+                  <div class="price item-price">10.000vnd</div>
+                  <div class="quantity-control">
+                    <button class="btn btn-secondary decrease-quantity">
+                      -
+                    </button>
+                    <span class="item-quantity">1</span>
+                    <button class="btn btn-secondary increase-quantity">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <span class="fas fa-times remove-item"></span>
+            </div> -->
+            <hr />
+            <div class="cart-summary d-flex flex-column justify-content-end">
+              <div class="mb-2" id="cart-total-summary">Tổng cộng: </div>
+              <a href="/checkout.html" class="btn btn-primary text-left">Thanh toán</a>
+            </div>
+          </div>
+          <div class="user-menu">
+            <div class="fas fa-times" id="close-btn"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="main" id="main">
+      <div id="navbar-category" class="navbar-collapse">
+        <ul class="nav navbar-nav side-nav">
+          <li class="nav-category-item">
+            <button class="category-title" id="toggle-all-drinks">
+              🍹Thức uống
+            </button>
+            <ul class="collapse show" id="collapseDrinks">
+              <li><a class="category-item" href="#cafe">Cafe ☕️</a></li>
+              <li><a class="category-item" href="#tea">Tea 🍵</a></li>
+              <li><a class="category-item" href="#soda">Soda 🥤</a></li>
+              <li><a class="category-item" href="#juice">Juice 🧃</a></li>
+              <li><a class="category-item" href="#yaourt">Yaourt ๅ</a></li>
+              <li><a class="category-item" href="#smoothie">Smoothie 🍨</a></li>
+              <li><a class="category-item" href="#iceblend">Iceblend 🧊</a></li>
+            </ul>
+          </li>
+          <li class="nav-category-item">
+            <button class="category-title" id="toggle-all-cake">🥮 Bánh</button>
+            <ul class="collapse show" id="collapseCake">
+              <li><a class="category-item" href="#coldcake">Coldcake ❄️</a></li>
+              <li>
+                <a class="category-item" href="#cookies-croissant"
+                  >Cookies croissant 🍪</a
+                >
+              </li>
+              <li><a class="category-item" href="#bread">Bread 🥖</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="sanpham section-content" id="sanpham"></div>
+    </section>
+    <section class="footer">
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+      </div>
+      <div class="links">
+        <a href="/">Trang chủ</a>
+        <a href="/menu.html">Menu</a>
+        <a href="/journey.html">About</a>
+        <a href="/auth.html">Sự kiện</a>
+        <a href="/auth.html">Thành viên</a>
+      </div>
+      <div class="credit">
+        created by <span>Nguyen Quoc Nhut</span> | all rights reserved!
+      </div>
+    </section>
+  </body>
+</html>
