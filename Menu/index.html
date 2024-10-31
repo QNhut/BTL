@@ -115,7 +115,9 @@
             <div class="navbar-toggler" type="button" id="search-btn">
               <i class="fas fa-search"></i>
             </div>
-            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn">
+              <span class="cart-count">0</span>
+            </div>
             <div id="current-user"></div>
             <div class="navbar-toggler" type="button" id="menu-btn">
               <i class="fas fa-bars"></i>
@@ -180,7 +182,6 @@
           <h1
             class="text-center category-title"
             id="toggle-all-category"
-            onclick="toggleAll()"
           >
             Tất cả
           </h1>
@@ -189,7 +190,6 @@
           <h2
             class="category-title"
             id="toggle-all-drinks"
-            onclick="toggleSection('collapseDrinks')"
           >
             Thức uống
           </h2>
@@ -209,7 +209,6 @@
           <h2
             class="category-title"
             id="toggle-all-cake"
-            onclick="toggleSection('collapseCake')"
           >
             Bánh
           </h2>
@@ -225,7 +224,7 @@
         </div>
       </section>
       <aside class="sanpham" id="sanpham">
-        <!-- <section class="menu" id="cafe">
+        <!-- render products -->
             <h1 class="heading "><span>Cà </span> phê</h1>
             <div class="box-container">
                 <div class="row justify-content-center">

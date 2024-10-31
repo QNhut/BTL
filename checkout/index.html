@@ -46,25 +46,24 @@
                       <li><a href="/menu/index.html#cafe">Cà phê</a></li>
                       <li><a href="/menu/index.html#tea">Trà</a></li>
                       <li><a href="/menu/index.html#soda">Soda</a></li>
-                      <li><a href="/menu/index.html#nuocep">Nước ép</a></li>
+                      <li><a href="/menu/index.html#juice">Nước ép</a></li>
                       <li><a href="/menu/index.html#yaourt">Yaourt</a></li>
                       <li><a href="/menu/index.html#smoothie">Sinh tố</a></li>
                       <li><a href="/menu/index.html#iceblend">Đá xay</a></li>
                     </ul>
                   </div>
-
                   <div class="menu-n mx-3">
                     <h2>Bánh ngọt</h2>
                     <ul class="menu-l">
                       <li>
-                        <a href="../Menu/index1.html#banhlanh">Bánh lạnh</a>
+                        <a href="../Menu/index1.html#coldcake">Bánh lạnh</a>
                       </li>
                       <li>
-                        <a href="../Menu/index1.html#banhquy"
+                        <a href="../Menu/index1.html#cookies-croissant"
                           >Bánh cookies - croissant</a
                         >
                       </li>
-                      <li><a href="../Menu/index1.html#banhmi">Bánh mì</a></li>
+                      <li><a href="../Menu/index1.html#banh-mi">Bánh mì</a></li>
                     </ul>
                   </div>
                 </div>
@@ -91,6 +90,7 @@
                       </li>
                     </ul>
                   </div>
+
                   <div class="menu-n mx-3">
                     <h2>Hạt Cà Phê Rang Xay</h2>
                     <ul class="menu-l">
@@ -104,6 +104,7 @@
                   </div>
                 </div>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="/auth/index.html">Hội viên</a>
               </li>
@@ -113,7 +114,9 @@
             <div class="navbar-toggler" type="button" id="search-btn">
               <i class="fas fa-search"></i>
             </div>
-            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn">
+              <span class="cart-count">0</span>
+            </div>
             <div id="current-user"></div>
             <div class="navbar-toggler" type="button" id="menu-btn">
               <i class="fas fa-bars"></i>
@@ -129,39 +132,31 @@
             />
           </div>
           <div class="cart-items-container">
-            <div class="cart-item">
-              <span class="fas fa-times"></span>
-              <img src="../Image/item1.jpg" alt="img" width="100px" />
-              <div class="content">
-                <h3>title</h3>
-                <div class="price">$100</div>
+            <!-- <div class="cart-item">
+              <img
+                src="/Image/Cake/Banhlanh/1.png"
+                alt="img"
+                width="100px"
+                class="item-image"
+              />
+              <div class="content card-content">
+                <h3 class="item-title">Cake</h3>
+                <div class="item-information">
+                  <div class="price item-price">10.000vnd</div>
+                  <div class="quantity-control">
+                    <button class="btn btn-secondary decrease-quantity">
+                      -
+                    </button>
+                    <span class="item-quantity">1</span>
+                    <button class="btn btn-secondary increase-quantity">
+                      +
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="cart-item">
-              <span class="fas fa-times"></span>
-              <img src="../Image/item2.jpg" alt="img" width="100px" />
-              <div class="content">
-                <h3>title</h3>
-                <div class="price">$100</div>
-              </div>
-            </div>
-            <div class="cart-item">
-              <span class="fas fa-times"></span>
-              <img src="../Image/item3.jpg" alt="img" width="100px" />
-              <div class="content">
-                <h3>title</h3>
-                <div class="price">$100</div>
-              </div>
-            </div>
-            <div class="cart-item">
-              <span class="fas fa-times"></span>
-              <img src="../Image/item4.jpg" alt="img" width="100px" />
-              <div class="content">
-                <h3>title</h3>
-                <div class="price">$100</div>
-              </div>
-            </div>
-            <a href="#" class="btn">Check Out</a>
+              <span class="fas fa-times remove-item"></span>
+            </div> -->
+            <a href="/checkout" class="btn btn-primary text-left">Thanh toán</a>
           </div>
           <div class="user-menu">
             <div class="fas fa-times" id="close-btn"></div>

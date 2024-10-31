@@ -522,7 +522,6 @@ $(document).ready(function () {
     "coldcake",
     "cookies-croissant",
     "banh-mi",
-
   ];
 
   // Hàm render danh mục sản phẩm
@@ -575,12 +574,19 @@ $(document).ready(function () {
   });
 
   // CART
+  const updateCartCount = () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+    $(".cart-count").text(totalCount); // Hiển thị số lượng trên biểu tượng giỏ hàng
+  };
+
   // Load cart from localStorage
   const loadCart = () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.forEach((item) => {
       renderCartItem(item);
     });
+    updateCartCount()
   };
 
   // Render cart item
@@ -633,6 +639,7 @@ $(document).ready(function () {
 
     localStorage.setItem("cart", JSON.stringify(cart));
     renderCartItem({ ...product, quantity: 1 }); // Render mới để hiển thị
+    updateCartCount()
   });
 
   // Remove item from cart
@@ -642,6 +649,7 @@ $(document).ready(function () {
     cart = cart.filter((item) => Number(item.id) !== Number(itemId));
     localStorage.setItem("cart", JSON.stringify(cart));
     $(this).closest(".cart-item").remove();
+    updateCartCount()
   });
 
   // Increase quantity
@@ -655,6 +663,7 @@ $(document).ready(function () {
     const itemInCart = cart.find((item) => Number(item.id) === itemId);
     itemInCart.quantity++;
     localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount()
   });
 
   // Decrease quantity
@@ -673,6 +682,8 @@ $(document).ready(function () {
     } else {
       $(this).closest(".cart-item").remove();
     }
+
+    updateCartCount()
   });
 
   loadCart(); // Fetch and render cart data on page load
